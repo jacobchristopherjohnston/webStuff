@@ -1,0 +1,54 @@
+body {
+    color:black
+}
+h1 {
+    background-color: green;
+    color: blue;
+}
+h2 {
+    background-color: blue;
+    color: purple
+}
+h3{
+    background-color:orange;
+    color: green
+}
+p {
+    color: red;
+}
+
+.poop{
+  background-image: url("photo0.jpg");
+  position: fixed; /* Fixed position - sit on top of the page */
+  top: 0; 
+  width: 100%; /* Full width */
+  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+}
+
+.b{
+    /* The image used */
+    background-image: url("photo1.png");
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h{
+    width: auto;
+    background-color: grey
+}
+.topImage{
+    width: 100%
+}
+.f{
+    width: auto;
+    height: 200px;
+}
+.bottomImage{
+    width: 100%
+}

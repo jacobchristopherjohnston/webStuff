@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    <head>
+        <link rel="stylesheet" href="/Users/Jake/web/html/p_test_css.css" type="text/css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link rel="stylesheet" href="jquery-ui.min.css">
+        <script src="external/jquery/jquery.js"></script>
+        <script src="jquery-ui.min.js"></script>
+    </head>
+
+    <div class="mainContainer">
+        <video autoplay muted loop id="vid">
+            <source src="smoke.mp4" type="video/mp4"/>
+        </video>
+
+            <script>
+            document.getElementById("vid").play();
+
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "35vh";
+            }
+            /* Set the width of the sidebar to 0 (hide it) */
+            function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+            }
+
+            </script>
+
+<div id="mySidepanel" class="sidepanel" onmouseleave = "closeNav()" >
+        <div id="menuHolder" >
+        <a href="#" >About</a>
+        <a href="#" >Services</a>
+        <a href="#" >Clients</a>
+        <a href="#" >Contact</a>
+        <span class="menuButton" >Menu</span>
+        </div>
+</div>
+
+    <div id="navButtonContainer">
+            <button class="openbtn" onmouseover="openNav()" > &#9776;</button> 
+
+    </div>
+
+
+        <div class ="headerContainer" onmouseover="closeNav()">
+        </div>
+
+        <div class="bodyContainer" onmouseover="closeNav()">
+
+            <table class = "menuTable">
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="footerContainer" onmouseover="closeNav()">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+            <a href="#" class="google"><i class="fa fa-google"></i></a> 
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+        </div>
+
+    </div>
+
+    </body>
+
+    <script>
+        $(document.getElementById("openbtn")).mouseleave(closeNav());
+
+        $(".menuButton").click(function () {        
+        $header = $(this);
+        //getting the next element
+        $bodyDiv = $(".bodyContainer");
+        $menuTable  = $(".menuTable tbody");
+        $(".menuTable tbody").empty();
+        //LETS ADD SOME LIST ITEMS
+        var rowItem = $("<tr></tr>");
+        for(var k = 0; k<25; k++){
+            if(k%3==0){
+                $menuTable.append(rowItem);
+                }
+        var listItem = $("<td class = \"listItem\" style = \"display : none\"> </td>");
+        
+        $(".menuTable tr:last").append(listItem);
+        listItem.fadeToggle(500);
+        }
+        });
+        
+    </script>
+</html>
